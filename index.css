@@ -1,0 +1,260 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#context_container {
+    overflow: hidden;
+    float: left;
+    /* position: absolute; */
+    /* height: 100%; */
+    width: 100%;
+}
+
+webview {
+    display: block;   /* iframes are inline by default */
+    border: none;     /* Reset default border */
+    height: 100vh;     /* Viewport-relative units */
+    width: 100vw;
+}
+
+.tabs{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    height: 32px;
+}
+
+.tab-section{
+    height: inherit;
+}
+
+.btn-section button:hover{
+    background-color: #ddd;
+}
+
+.btn-section button.active{
+    background-color: green;
+}
+
+.tab-container{
+    float: left;
+    border-right: 1px solid #bbb;
+    background-color: #d6d6d6;
+    padding: 6px 20px;
+    opacity: 0.6;
+    position: relative;
+    width: 80px;
+    display: flex;
+    box-sizing: content-box;
+    padding-right: 35px;
+}
+
+.tab-container:hover{
+    background-color: #c3c3c3;
+}
+
+.tab-container-active{
+    float: left;
+    border-right: 1px solid lightblue;
+    padding: 6px 20px;
+    position: relative;
+    width: 80px;
+    display: flex;
+    box-sizing: content-box;
+    padding-right: 35px;
+}
+
+.tab-size {
+    overflow: hidden;
+}
+
+.tab-link-active {
+    color: lightblue;
+}
+
+.tab-link {
+    color: black;
+}
+
+.close-btn{
+    position: absolute;
+    right: 8px;
+}
+
+#add-tab {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.tab-container-active > .close-btn:hover{
+    background-color: #e4e4e4;
+}
+
+.close-btn:hover{
+    background-color: rgb(173, 172, 172);
+}
+
+.go-btn{
+    border: 1px solid #949494;
+    margin-left: 6px;
+    /* position: relative;
+    left: 0.5%; */
+}
+
+.go-btn:hover{
+    background-color: gray;
+}
+
+input{
+    margin-left: 5px;
+    margin-top: 4px;
+    width: 95%;
+}
+
+.webview{
+    width: 100%;
+    height: 94%;
+}
+
+.tab-browser{
+    display: none;
+}
+
+.tab-browser-active{
+    width: 100%;
+    height: 100%;
+}
+
+#webview_context {
+    width: 100%;
+    height: 94%;
+}
+
+.url_box_container {
+    display: flex;
+    margin-top: 5px;
+    /* margin-bottom: 15px; */
+    width: 100%;
+    height: 25px;
+}
+
+.backforwardbuttons {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+
+.homepage {
+    margin-left: 5px;
+}
+
+.homepage > img {
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+}
+
+.backbutton {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+.refreshbutton {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+}
+
+.menu_secton {
+    margin-left: 15px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 45px;
+    height: 25px;
+}
+
+.menu-image-style{
+    width: 45px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.forwardbutton{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+.url_box > input {
+    border-radius: 15px;
+    border-style: solid;
+}
+
+iframe {
+    height: 100% !important;
+}
+
+.hide_web_view {
+    display: none;
+}
+
+.menu_details_section {
+    position: absolute;
+    z-index: 999;
+    top: 62px;
+    height: 150px;
+    width: 190px;
+    background-color: grey;
+    right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu_items {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.home-page-label {
+    margin-top: 5px;
+}
+
+.history-buttom-style {
+    margin-left: 50px;
+}
+
+.home_page_style {
+    width: 100px;
+}
+
+.hide_popup {
+    display: none;
+}
+
+.history-popup {
+    position: absolute;
+    top: 80px;
+    width: 250px;
+    height: 350px;
+    left: 350px;
+    background-color: grey;
+}
+
+#close-history-view {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
