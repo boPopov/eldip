@@ -195,7 +195,7 @@ tr:nth-child(even) {
 input{
     margin-left: 5px;
     margin-top: 4px;
-    width: 95%;
+    width: 100%;
 }
 
 .webview{
@@ -304,6 +304,7 @@ input{
 }
 
 .url_box > input {
+    padding-left: 15px;
     border-radius: 15px;
     border-style: solid;
 }

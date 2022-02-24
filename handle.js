@@ -99,6 +99,10 @@ function addListener() {
     })
 
     clearHistory.addEventListener("click", () => {
+        let table = document.getElementById("history-table")
+        while (table.children.length > 1) {
+            table.removeChild(table.lastChild)
+        }
         historyPopUp.classList.add("hide_popup")
         view.clearAllHistory();
     })
