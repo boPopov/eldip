@@ -24,6 +24,11 @@ export default class Tab {
         this.tabElement.id = newid
     }
 
+    changeTabName(url) {
+        this.name = this.convertName(url);
+        this.tabElement.children[0].innerText = this.name
+    }
+
     setTabElement(elem) {
         console.log("Setting tab element", elem)
         this.tabElement = elem

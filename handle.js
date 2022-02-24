@@ -14,6 +14,7 @@ var menuPopUp = null
 var historyButton = null
 var historyPopUp = null
 var closeHistoryView = null
+var clearHistory = null
 
 /**
  * Init important data
@@ -31,6 +32,7 @@ function start() {
     historyButton = document.getElementById('history')
     historyPopUp = document.getElementById("history_view")
     closeHistoryView = document.getElementById("close-history-view")
+    clearHistory = document.getElementById("clearhistory")
     // document.onkeydown = addKeyEventListener()
     view = new View(urlBar, tabList, contextContainer)
     addNewTab = document.getElementById("add-tab")
@@ -74,18 +76,31 @@ function addListener() {
         let historyContent = view.getAllHistory()
         let tableRow = null
         let tableElement = null
+        let paragraph = null
         console.log("History is", historyContent)
         historyContent.forEach(element => {
+            paragraph = document.createElement("p")
+            paragraph.innerText = element
             tableElement = document.createElement("td")
-            tableElement.innerHTML = element
             tableRow = document.createElement("tr")
+            tableElement.appendChild(paragraph)
             tableRow.appendChild(tableElement)
             table.appendChild(tableRow)
         })
     })
 
     closeHistoryView.addEventListener("click", () => {
+        let table = document.getElementById("history-table")
+        while (table.children.length > 1) {
+            table.removeChild(table.lastChild)
+        }
+        
         historyPopUp.classList.add("hide_popup")
+    })
+
+    clearHistory.addEventListener("click", () => {
+        historyPopUp.classList.add("hide_popup")
+        view.clearAllHistory();
     })
 }
 

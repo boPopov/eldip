@@ -42,6 +42,40 @@ webview {
 }
 
 .tab-container{
+    /* float: left;
+    border-right: 1px solid #bbb;
+    background-color: #d6d6d6;
+    padding: 6px 20px;
+    opacity: 0.6;
+    position: relative;
+    width: 80px;
+    display: flex;
+    box-sizing: content-box;
+    padding-right: 35px; */
+    float: left;
+    border-right: 1px solid lightblue;
+    padding: 6px 20px;
+    position: relative;
+    width: 80px;
+    display: flex;
+    box-sizing: content-box;
+    padding-right: 35px;
+}
+
+.tab-container:hover{
+    /* background-color: #c3c3c3; */
+    background-color: #e4e4e4;
+}
+
+.tab-container-active{
+    /* float: left;
+    border-right: 1px solid lightblue;
+    padding: 6px 20px;
+    position: relative;
+    width: 80px;
+    display: flex;
+    box-sizing: content-box;
+    padding-right: 35px; */
     float: left;
     border-right: 1px solid #bbb;
     background-color: #d6d6d6;
@@ -54,36 +88,33 @@ webview {
     padding-right: 35px;
 }
 
-.tab-container:hover{
+/* .tab-container-active > .close-btn:hover{
+    background-color: #e4e4e4;
     background-color: #c3c3c3;
-}
-
-.tab-container-active{
-    float: left;
-    border-right: 1px solid lightblue;
-    padding: 6px 20px;
-    position: relative;
-    width: 80px;
-    display: flex;
-    box-sizing: content-box;
-    padding-right: 35px;
-}
+} */
 
 .tab-size {
     overflow: hidden;
 }
 
 .tab-link-active {
-    color: lightblue;
+    /* color: lightblue; */
+    color: black;
 }
 
 .tab-link {
-    color: black;
+    /* color: black; */
+    color: lightblue;
 }
 
 .close-btn{
     position: absolute;
-    right: 8px;
+    right: 0px;
+    top: 0px;
+    width: 20px;
+    height: 27px;
+    padding-left: 13px;
+    padding-top: 5px;
 }
 
 #add-tab {
@@ -91,12 +122,63 @@ webview {
     margin-left: 5px;
 }
 
-.tab-container-active > .close-btn:hover{
-    background-color: #e4e4e4;
+.table-container {
+    height: 290px;
+    overflow: auto;
+    margin-top: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-.close-btn:hover{
-    background-color: rgb(173, 172, 172);
+table {
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 227px;
+    table-layout: fixed;
+    height: 231px;
+    overflow: hidden;
+}
+
+.clear-history-container {
+    margin-left: 50px;
+}
+
+.clear-history-button {
+    width: 150px;
+}
+  
+/* th, td {
+    border: 1px solid black;
+    width: 100px;
+    overflow: hidden;
+} */
+
+/* table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+} */
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.close-btn > div{
+    width: inherit;
+    border-radius: 35px;
+    text-align: center;
+    color: black;
+    padding-bottom: 2px;
+}
+
+.close-btn > div:hover{
+    background-color: red;
 }
 
 .go-btn{
@@ -137,10 +219,12 @@ input{
 
 .url_box_container {
     display: flex;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     /* margin-bottom: 15px; */
     width: 100%;
     height: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .backforwardbuttons {
@@ -156,44 +240,67 @@ input{
 
 .homepage > img {
     cursor: pointer;
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
+    transition: width 1s, height 1s;
+}
+
+.homepage > img:hover {
+    width: 28px;
+    height: 28px;
 }
 
 .backbutton {
     cursor: pointer;
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
     margin-right: 3px;
+    transition: width 1s, height 1s;
+}
+
+.backbutton:hover {
+    width: 22px;
+    height: 22px;
 }
 
 .refreshbutton {
     cursor: pointer;
+    width: 17px;
+    height: 17px;
+    margin-top: 5px;
+    transition: width 1s, height 1s;
+}
+
+.refreshbutton:hover {
     width: 22px;
     height: 22px;
 }
 
 .menu_secton {
-    margin-left: 15px;
+    cursor: pointer;
     position: absolute;
-    right: 0;
-    top: 35px;
-    width: 45px;
+    right: 10px;
+    top: 37px;
+    width: 27px;
     height: 25px;
 }
 
-.menu-image-style{
-    width: 45px;
-    height: 25px;
-    cursor: pointer;
+.style_menu {
+    margin-bottom: -4px;
 }
 
 .forwardbutton{
     cursor: pointer;
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
     margin-left: 2px;
     margin-right: 5px;
+    transition: width 1s, height 1s;
+}
+
+.forwardbutton:hover {
+    width: 22px;
+    height: 22px;
 }
 
 .url_box > input {
@@ -215,10 +322,12 @@ iframe {
     top: 62px;
     height: 150px;
     width: 190px;
-    background-color: grey;
     right: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    background-color: white;
+    border: 0.1px solid black;
+    box-shadow: 1px 1px black;
 }
 
 .menu_items {
@@ -249,7 +358,9 @@ iframe {
     width: 250px;
     height: 350px;
     left: 350px;
-    background-color: grey;
+    background-color: white;
+    border: 0.1px solid black;
+    box-shadow: 1px 1px black;
 }
 
 #close-history-view {

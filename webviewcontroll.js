@@ -7,12 +7,15 @@ export default class WebView {
     activeCheck = null
     urlBar = null
     isActive = false
+    relatedTab = null
 
     idName = ""
     
-    constructor(settings) {
+    constructor(settings, tab) {
+        console.log("TAB", tab)
         this.settings = settings
         this.url = this.settings.getHomePage()
+        this.relatedTab = tab
     }
 
     setIDName(name) {
@@ -94,6 +97,7 @@ export default class WebView {
                 console.log("current url - after", this.currentURL)
                 this.settings.addVisitedPage(this.currentURL)
                 this.urlBar.value = this.currentURL
+                this.relatedTab.changeTabName(this.currentURL)
             }
         }, 100)
     }
@@ -145,5 +149,9 @@ export default class WebView {
 
     fullRefresh() {
         this.webViewElement.reloadIgnoringCache()
+    }
+
+    clearMyHistory() {
+        this.webViewElement.clearHistory()
     }
 }

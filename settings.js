@@ -19,4 +19,8 @@ export default class Settings {
     getHistory() {
         return this.history
     }
+
+    clearHistory() {
+        this.history = []
+    }
 }

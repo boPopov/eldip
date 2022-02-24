@@ -158,7 +158,7 @@ export default class View {
     }
 
     addWebView(){
-        this.WebViewList.push(new WebView(this.settings))
+        this.WebViewList.push(new WebView(this.settings, this.TabList[this.indexLists]))
     }
 
     addTabHTML() {
@@ -172,11 +172,18 @@ export default class View {
         this.divName.id = "tab-" + this.totalListLenght;
         this.divName.innerText = this.TabList[this.indexLists].getName();
         //creating close button
-        this.button = document.createElement("button");
+        this.button = document.createElement("div");
         this.button.id = "close-btn-" + this.totalListLenght;
-        this.button.className = "close-btn";
+        this.button.className = "close-btn"; 
+        // this.button.innerHTML = "x";
+
+        // Old button 
+        // this.button = document.createElement("button");
+        // this.button.id = "close-btn-" + this.totalListLenght;
+        // this.button.className = "close-btn";
+
         //creating content for close button
-        this.span = document.createElement("span");
+        this.span = document.createElement("div");
         this.span.ariaHidden = false;
         this.span.innerText = "x";
         //appending span to button
@@ -373,6 +380,13 @@ export default class View {
 
     getAllHistory() {
         return this.settings.getHistory()
+    }
+
+    clearAllHistory() {
+        this.settings.clearHistory()
+        this.WebViewList.forEach(element => {
+            element.clearMyHistory()
+        })
     }
 
     increseIndex() {

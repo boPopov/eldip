@@ -6,6 +6,9 @@
         <script type="module" src="webviewcontroll.js"></script>
         <script type="module" src="settings.js"></script>
         <script type="module" src="view.js"></script>
+        <!-- Boostrap import -->
+        <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+        <!-- <script scr="js/boostrap.js"></script> -->
         <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
         <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
@@ -25,6 +28,7 @@
                     <div id="tab-1" class="tab-link-active tab-size">Google</div>
                     <button id="close-tab" class="close-btn"><span aria-hidden="false">&times;</span></button>
                 </div> -->
+                <i class="fa fa-close"></i>
             </div>
             <div>
                 <button id="add-tab">+</button>
@@ -44,8 +48,17 @@
             <div class="url_box">
                 <input id="url-bar" type="text">
             </div>
-            <div class="menu_secton">
-                <img src="./images/menu-icon.jpg" alt="menu" title="Browser Menu" id="menu" class="menu-image-style">
+            <div class="menu_secton" id="menu">
+                <div class="style_menu">
+                    <hr>
+                </div>
+                <div class="style_menu">
+                    <hr>
+                </div>
+                <div>
+                    <hr>
+                </div>
+                <!-- <img src="./images/menu-icon.jpg" alt="menu" title="Browser Menu" id="menu" class="menu-image-style"> -->
             </div>
         </div>
     <!-- <div id="context" onload="load('www.google.com')"></div> -->
@@ -66,11 +79,16 @@
             <div id="close-history-view">
                 x
             </div>
-            <table id="history-table">
-                <tr>
-                    <th>Site</th>
-                </tr>
-            </table>
+            <div class="table-container">
+                <table id="history-table">
+                    <tr>
+                        <td>Site</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="clear-history-container">
+                <button id="clearhistory" class="clear-history-button">Clean History</button>
+            </div>
         </div>
     </body>
 </html>
