@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="module" src="handle.js"></script>
+        <script type="module" src="webviewcontroll.js"></script>
+        <script type="module" src="settings.js"></script>
+        <script type="module" src="view.js"></script>
+        <!-- Boostrap import -->
+        <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+        <!-- <script scr="js/boostrap.js"></script> -->
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>Hello World!</title>
+        <!-- <script>
+            const {
+                load
+            } = require("./handle.js")
+        </script> -->
+    </head>
+    <body>
+        <div class="tabs">
+            <!-- <div class="tab-container-active" onclick="setActive(this.children[0].id)"> -->
+            <div id="tabs-list">
+                <!-- <div class="tab-container-active">
+                    <div id="tab-1" class="tab-link-active tab-size">Google</div>
+                    <button id="close-tab" class="close-btn"><span aria-hidden="false">&times;</span></button>
+                </div> -->
+                <i class="fa fa-close"></i>
+            </div>
+            <div>
+                <button id="add-tab">+</button>
+            </div>
+        </div>
+        <div class="url_box_container">
+            <div class="backforwardbuttons">
+                <img src="./images/backbutton.PNG" title="Back" id="back-button" class="backbutton bfbutton" />
+                <img src="./images/forwardbutton.png" title="Forward" id="forward-button" class="forwardbutton bfbutton" />
+            </div>
+            <div>
+                <img src="./images/refresh.png" class="refreshbutton" alt="refresh" title="Refresh" id="refresh-button">
+            </div>
+            <div class="homepage" id="home">
+                <img src="./images/homepage.png" alt="home-page" title="Home Page">
+            </div>
+            <div class="url_box">
+                <input id="url-bar" type="text">
+            </div>
+            <div class="menu_secton" id="menu">
+                <div class="style_menu">
+                    <hr>
+                </div>
+                <div class="style_menu">
+                    <hr>
+                </div>
+                <div>
+                    <hr>
+                </div>
+                <!-- <img src="./images/menu-icon.jpg" alt="menu" title="Browser Menu" id="menu" class="menu-image-style"> -->
+            </div>
+        </div>
+    <!-- <div id="context" onload="load('www.google.com')"></div> -->
+        <div id="context-container" class="context_container">
+            <!-- <webview id="webViewElement" class="webview_context" autosize="off"></webview> -->
+        </div>
+        <div id="menu_popup" class="menu_details_section hide_popup">
+            <div class="home_page menu_items">
+                <label for="homepage" class="home-page-label">Home Page</label>
+                <input type="text" id="homepage" class="home_page_style">
+            </div>
+            <div class="history_details menu_items">
+                <label for="history">History</label>
+                <button id="history" class="history-buttom-style">More details</button>
+            </div>
+        </div>
+        <div id="history_view" class="history-popup hide_popup">
+            <div id="close-history-view">
+                x
+            </div>
+            <div class="table-container">
+                <table id="history-table">
+                    <tr>
+                        <td>Site</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="clear-history-container">
+                <button id="clearhistory" class="clear-history-button">Clean History</button>
+            </div>
+        </div>
+    </body>
+</html>
