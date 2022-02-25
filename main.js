@@ -1,7 +1,4 @@
 const { app, BrowserWindow } = require('electron')
-const {
-    settupmenu
-} = require("./headers")
 
 const createWindow = () => {
     const win = new BrowserWindow({
@@ -13,7 +10,6 @@ const createWindow = () => {
       }
     })
     
-    // win.loadURL("https://www.google.com")
     win.loadFile('index.html')
     win.webContents.openDevTools()
 }
@@ -43,10 +39,10 @@ function settupEvents() {
             event.preventDefault()
           }
 
-          console.log("params:", params)
+          // console.log("params:", params)
+          console.log("Starting...")
         })
       })
 }
 
-settupmenu()
 settupEvents()
