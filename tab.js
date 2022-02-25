@@ -22,6 +22,8 @@ export default class Tab {
     changeTabID(newid) {
         this.id = newid
         this.tabElement.id = newid
+        removeEventListener("click", this.closeEventListener);
+        this.setButtonCloseEventListener();
     }
 
     changeTabName(url) {
