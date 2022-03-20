@@ -121,7 +121,6 @@ export default class Tab {
     setButtonCloseEventListener() {
         setTimeout(() => {
             this.closeEventListener = document.getElementById("close-btn-" + this.id).addEventListener("click", () => {
-                console.log("AAAAAAAAAAAAAaaaa")
                 this.statusClosed = true;
                 removeEventListener("click", this.closeEventListener);
             })
