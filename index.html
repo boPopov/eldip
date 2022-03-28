@@ -6,33 +6,15 @@
         <script type="module" src="webviewcontroll.js"></script>
         <script type="module" src="settings.js"></script>
         <script type="module" src="view.js"></script>
-        <!-- Boostrap import -->
-        <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-        <!-- <script scr="js/boostrap.js"></script> -->
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <script type="module" src="settingsfunctions.js"></script>
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
         <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
         <link rel="stylesheet" type="text/css" href="index.css">
-<<<<<<< Updated upstream
-        <title>Hello World!</title>
-        <!-- <script>
-            const {
-                load
-            } = require("./handle.js")
-        </script> -->
-=======
         <title>Electron Browser</title>
->>>>>>> Stashed changes
     </head>
     <body>
         <div class="tabs">
-            <!-- <div class="tab-container-active" onclick="setActive(this.children[0].id)"> -->
             <div id="tabs-list">
-                <!-- <div class="tab-container-active">
-                    <div id="tab-1" class="tab-link-active tab-size">Google</div>
-                    <button id="close-tab" class="close-btn"><span aria-hidden="false">&times;</span></button>
-                </div> -->
-                <i class="fa fa-close"></i>
             </div>
             <div>
                 <button id="add-tab">+</button>
@@ -62,12 +44,9 @@
                 <div>
                     <hr>
                 </div>
-                <!-- <img src="./images/menu-icon.jpg" alt="menu" title="Browser Menu" id="menu" class="menu-image-style"> -->
             </div>
         </div>
-    <!-- <div id="context" onload="load('www.google.com')"></div> -->
         <div id="context-container" class="context_container">
-            <!-- <webview id="webViewElement" class="webview_context" autosize="off"></webview> -->
         </div>
         <div id="menu_popup" class="menu_details_section hide_popup">
             <div class="home_page menu_items">

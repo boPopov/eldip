@@ -22,9 +22,5 @@ export default class Settings {
 
     clearHistory() {
         this.history = []
-        // this.history.forEach(elem => {
-        //     this.history.pop(elem)
-        // })
-        // console.log("History", this.history)
     }
 }
